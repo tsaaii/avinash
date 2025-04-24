@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avinash Infrastructures - Mining & Infrastructure Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles */
+        :root {
+            --primary-color: #0074c0;
+            --secondary-color: #eeb313;
+            --accent-color: #008c88;
+            --dark-color: #333;
+            --light-color: #fff;
+            --grey-color: #f5f5f5;
+            --border-color: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #005ea3;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #d59f0e;
+        }
+        
+        /* Top Bar */
+        .roof-top-bar {
+            background-color: var(--light-color);
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .pull-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .pull-left strong {
+            margin-right: 5px;
+            color: var(--dark-color);
+        }
+        
+        .pull-right {
+            display: flex;
+            align-items: center;
+        }
+        
+        .roof-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #f0f0f0;
+            color: var(--dark-color);
+            margin-left: 10px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .roof-social a:hover {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+        }
+        
+        /* Header */
+        .roof-header {
+            background-color: var(--light-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .roof-add-section {
+            padding: 20px 0;
+        }
+        
+        .roof-add-section .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .roof-logo {
+            max-width: 150px;
+        }
+        
+        .custom-right-panel {
+            display: flex;
+        }
+        
+        .contact-details {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+        }
+        
+        .contact-item .pull-left {
+            background-color: #f5f5f5;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .contact-item .fa {
+            color: var(--primary-color);
+            font-size: 16px;
+        }
+        
+        .contact-info span {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #777;
+            font-weight: 500;
+        }
+        
+        .contact-info a,
+        .contact-info p {
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        /* Navigation */
+        .roof-navigation {
+            background-color: var(--primary-color);
+        }
+        
+        .roof-menu {
+            text-align: center;
+        }
+        
+        .roof-menu ul.navbar-nav {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+        
+        .roof-menu ul.navbar-nav li {
+            position: relative;
+        }
+        
+        .roof-menu ul.navbar-nav li a {
+            display: block;
+            color: var(--light-color);
+            padding: 25px 20px;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Raleway', sans-serif;
+            transition: color 0.3s ease;
+        }
+        
+        .roof-menu ul.navbar-nav li a:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .roof-menu ul.navbar-nav li.active > a,
+        .roof-menu ul.navbar-nav li.current-menu-item > a {
+            color: var(--secondary-color) !important;
+        }
+        
+        /* Slider */
+        .slider-section {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            overflow: hidden;
+        }
+        
+        .slider-content {
+            max-width: 600px;
+            margin-left: 10%;
+            z-index: 2;
+        }
+        
+        .slider-label {
+            color: var(--secondary-color);
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .slider-title {
+            color: var(--light-color);
+            font-size: 70px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .slider-desc {
+            color: var(--light-color);
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .slider-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background-color: var(--light-color);
+            position: relative;
+            margin-top: -100px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            z-index: 3;
+        }
+        
+        .about-title {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-desc {
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        /* Service Section */
+        .services-section {
+            padding: 80px 0;
+            background-color: var(--grey-color);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .services-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-box {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .roof-picture {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .roof-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-box:hover .roof-picture img {
+            transform: scale(1.1);
+        }
+        
+        .service-info {
+            padding: 25px;
+        }
+        
+        .service-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .service-info p {
+            margin-bottom: 20px;
+            font-size: 15px;
+            color: #666;
+        }
+        
+        .read-more {
+            display: inline-block;
+        }
+        
+        .read-more a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .read-more a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .read-more a::after {
+            content: '\f105';
+            font-family: 'Font Awesome 5 Free';
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .read-more a:hover::after {
+            transform: translateX(5px);
+        }
+        
+        /* Video Section */
+        .video-section {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0, 116, 192, 0.8), rgba(0, 116, 192, 0.8)), url('images/video-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light-color);
+            text-align: center;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .p-head {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        /* Counter Section */
+        .counter-section {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/counter-bg.jpg') center/cover no-repeat;
+            color: var(--light-color);
+        }
+        
+        .status-list {
+            text-align: center;
+        }
+        
+        .roof-icon {
+            font-size: 64px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .status-info h2 {
+            font-size: 46px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .status-title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .testimonial-wrap {
+            background-color: var(--primary-color);
+            padding: 80px 0;
+            color: var(--light-color);
+            text-align: center;
+            position: relative;
+        }
+        
+        .testimonial-wrap p {
+            font-size: 18px;
+            line-height: 1.8;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        
+        .quote-client {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+        }
+        
+        .form-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-heading h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-heading h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .contact-form {
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .wpcf7-submit {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            width: 100%;
+        }
+        
+        .wpcf7-submit:hover {
+            background-color: #005ea3;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--grey-color);
+        }
+        
+        .accordion {
+            margin-bottom: 15px;
+        }
+        
+        .accordion-item {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+        
+        .accordion-header {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .accordion-button {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background-color: var(--light-color);
+            border: none;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark-color);
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-button:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .accordion-button::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+        }
+        
+        .accordion-button[aria-expanded="true"]::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+        
+        .accordion-body {
+            padding: 0 20px 20px;
+        }
+        
+        /* Footer */
+        .roof-footer {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 60px 0 0;
+        }
+        
+        .footer-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-widget h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-widget h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--light-color);
+        }
+        
+        .footer-widget p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--light-color);
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-menu {
+            list-style: none;
+        }
+        
+        .footer-menu li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-menu a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .footer-menu a::before {
+            content: '\f105';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-menu a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer-menu a:hover::before {
+            transform: translateX(5px);
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .footer-contact-icon {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        
+        .roof-copyright {
+            background-color: #045489;
+            padding: 20px 0;
+            text-align: center;
+            color: #e1e0e0;
+            font-size: 14px;
+        }
+        
+        .roof-copyright a {
+            color: var(--secondary-color);
+        }
+        
+        .roof-copyright a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .contact-details {
+                display: none;
+            }
+            
+            .slider-title {
+                font-size: 50px;
+            }
+            
+            .form-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .roof-menu ul.navbar-nav {
+                flex-direction: column;
+            }
+            
+            .roof-menu ul.navbar-nav li a {
+                padding: 15px;
+            }
+            
+            .slider-content {
+                margin-left: 0;
+                text-align: center;
+            }
+            
+            .slider-title {
+                font-size: 40px;
+            }
+            
+            .slider-buttons {
+                justify-content: center;
+            }
+            
+            .counter-row {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .slider-section {
+                height: 500px;
+                padding: 0 20px;
+            }
+            
+            .slider-title {
+                font-size: 30px;
+            }
+            
+            .about-section {
+                margin-top: -50px;
+                padding: 40px 20px;
+            }
+            
+            .counter-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="roof-top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="pull-left">
+                    <strong>OPEN HOURS:</strong> Mon - Sat 8:00 - 18:00
+                </div>
+                <div class="pull-right">
+                    <div class="roof-social">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="roof-header">
+        <div class="roof-add-section">
+            <div class="container">
+                <!-- Logo -->
+                <div class="roof-logo">
+                    <a href="#">
+                        <img src="images/logo.png" alt="Mining Company Logo">
+                    </a>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="custom-right-panel">
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="pull-left"><i class="fa fa-phone"></i></div>
+                            <div class="contact-info">
+                                <span>CONTACT PHONE</span>
+                                <a href="tel:+919999999">+91-999999999</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="pull-left"><i class="fa fa-envelope"></i></div>
+                            <div class="contact-info">
+                                <span>EMAIL ID</span>
+                                <p>info@avinashinfrastructures.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="pull-left"><i class="fa fa-map-marker"></i></div>
+                            <div class="contact-info">
+                                <span>ADDRESS</span>
+                                <p>Anakapalle, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="roof-navigation">
+            <div class="container">
+                <nav class="roof-menu menu-style-two">
+                    <ul class="navbar-nav">
+                        <li class="active"><a href="#" class="scroll-link">Home</a></li>
+                        <li><a href="#about" class="scroll-link">About Us</a></li>
+                        <li><a href="#services" class="scroll-link">Services</a></li>
+                        <li><a href="#projects" class="scroll-link">Projects</a></li>
+                        <li><a href="#equipment" class="scroll-link">Equipment</a></li>
+                        <li><a href="#contact" class="scroll-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Slider Section -->
+    <section class="slider-section">
+        <div class="slider-content">
+            <span class="slider-label">Welcome to Avinash Infrastructures</span>
+            <h1 class="slider-title">Mining & Infrastructure Solutions</h1>
+            <p class="slider-desc">We provide comprehensive mining services and infrastructure development with a focus on safety, efficiency, and environmental responsibility.</p>
+            <div class="slider-buttons">
+                <a href="#contact" class="btn">Contact Us</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="roof-footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-widget">
+                    <h3>About Company</h3>
+                    <p>Avinash Infrastructures is a leading provider of mining services and infrastructure development with a focus on quality, safety, and environmental responsibility.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#" class="scroll-link">Home</a></li>
+                        <li><a href="#about" class="scroll-link">About Us</a></li>
+                        <li><a href="#services" class="scroll-link">Services</a></li>
+                        <li><a href="#projects" class="scroll-link">Projects</a></li>
+                        <li><a href="#equipment" class="scroll-link">Equipment</a></li>
+                        <li><a href="#contact" class="scroll-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Services</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#services" class="scroll-link">Mining Operations</a></li>
+                        <li><a href="#services" class="scroll-link">Aggregates & Materials</a></li>
+                        <li><a href="#services" class="scroll-link">Infrastructure Development</a></li>
+                        <li><a href="#services" class="scroll-link">Environmental Services</a></li>
+                        <li><a href="#services" class="scroll-link">Equipment Rental</a></li>
+                        <li><a href="#services" class="scroll-link">Consulting Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Contact Details</h3>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>Anakapalle, India</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>+9199999999</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>info@avinashinfrastructures.com</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>Mon - Sat: 8:00AM - 6:00PM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="roof-copyright">
+            <div class="container">
+                <p>&copy; 2025 Avinash Infrastructures - All Rights Reserved. Designed by <a href="#">Advitia Labs</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for accordion functionality and smooth scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle accordion clicks
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const target = document.querySelector(this.getAttribute('data-bs-target'));
+                    
+                    // Toggle the current panel
+                    if (target.style.display === 'block') {
+                        target.style.display = 'none';
+                        this.setAttribute('aria-expanded', 'false');
+                    } else {
+                        target.style.display = 'block';
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                    
+                    // Update the after pseudo-element
+                    this.classList.toggle('collapsed');
+                });
+            });
+            
+            // Initially hide all accordion bodies except the first one
+            const accordionBodies = document.querySelectorAll('.accordion-body');
+            accordionBodies.forEach((body, index) => {
+                if (index !== 0) {
+                    body.style.display = 'none';
+                }
+            });
+            
+            // Smooth scrolling for navigation links
+            const scrollLinks = document.querySelectorAll('.scroll-link');
+            
+            scrollLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get the target section id from the href
+                    const targetId = this.getAttribute('href');
+                    
+                    // Skip if the href is just "#"
+                    if (targetId === '#') return;
+                    
+                    // Find the target element
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Scroll to the target section smoothly
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Optional: Update active state in navigation
+                        document.querySelectorAll('.navbar-nav li').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                        
+                        if (this.parentElement.tagName === 'LI') {
+                            this.parentElement.classList.add('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+    <!-- Contact and FAQ Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="form-content">
+                <div class="contact-heading">
+                    <h2>Request A Quick Quote</h2>
+                    <p>Best quality mining services and expert advice on any mining or construction related requirements. Please get in touch with us using the form below.</p>
+                    
+                    <!-- Contact Form -->
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control" placeholder="Full Name" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control" placeholder="Email Address" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="tel" class="form-control" placeholder="Phone Number" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control" placeholder="Subject" required>
+                            </div>
+                            <div class="col-12 form-group">
+                                <textarea class="form-control" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="wpcf7-submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="faq-content">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                    What mining services do you provide?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-body">
+                                <p>We provide a comprehensive range of mining services including exploration, excavation, drilling, blasting, material handling, and processing. We also offer infrastructure development, environmental management, and consulting services.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                    How do you ensure safety in your operations?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-body">
+                                <p>Safety is our top priority. We implement comprehensive safety management systems, conduct regular training for all personnel, maintain strict compliance with regulations, use the latest safety equipment, and perform continuous monitoring and risk assessments.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                    What materials do you supply?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-body">
+                                <p>We supply various construction materials including aggregates, sand, gravel, crushed stone, fly ash, bricks, and ready-mix concrete. All our materials meet the highest quality standards and are available in different grades to suit various construction needs.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                    Do you handle projects of all sizes?
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-body">
+                                <p>Yes, we handle projects of all sizes from small-scale operations to large industrial projects. Our experienced team and extensive equipment fleet allow us to efficiently manage projects of varying scales while maintaining the same level of quality and attention to detail.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                    How do you address environmental concerns?
+                                </button>
+                            </h3>
+                            <div id="faq5" class="accordion-body">
+                                <p>We are committed to responsible environmental stewardship. We implement sustainable mining practices, conduct thorough environmental impact assessments, develop comprehensive land reclamation plans, employ modern waste management techniques, and strictly adhere to all environmental regulations and standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="about-title">About Us</h2>
+                <p class="about-desc">Since its foundation, Avinash Infrastructures has been consistently delivering avant-garde mining services and infrastructure development across all major sectors. We are pioneers in the industry, with a focus on quality, safety, and environmental responsibility.</p>
+                <p class="about-desc">Our mission is to redefine industry paradigms by consistently achieving new milestones with absolute efficiency, reliability, and transparency. We regard all of our customers' projects as investments, working relentlessly to enhance their Return on Investment by delivering advanced, efficient, robust, and scalable mining solutions.</p>
+                <a href="#services" class="btn scroll-link">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We provide a comprehensive range of mining and infrastructure services tailored to meet the specific needs of our clients.</p>
+            </div>
+            <div class="services-wrap">
+                <div class="product-box">
+                    <div class="roof-picture">
+                        <a href="#">
+                            <img src="images/mining-operations.jpg" alt="Mining Operations">
+                        </a>
+                    </div>
+                    <div class="service-info">
+                        <h5 class="service-title">Mining Operations</h5>
+                        <p>Comprehensive mining operations including excavation, drilling, blasting, and material handling with state-of-the-art equipment and techniques.</p>
+                        <div class="read-more">
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="roof-picture">
+                        <a href="#">
+                            <img src="images/aggregates.jpg" alt="Aggregates & Materials">
+                        </a>
+                    </div>
+                    <div class="service-info">
+                        <h5 class="service-title">Aggregates & Materials</h5>
+                        <p>Quality aggregates, sand, and construction materials sourced and processed to meet the highest industry standards for various construction needs.</p>
+                        <div class="read-more">
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="roof-picture">
+                        <a href="#">
+                            <img src="images/infrastructure.jpg" alt="Infrastructure Development">
+                        </a>
+                    </div>
+                    <div class="service-info">
+                        <h5 class="service-title">Infrastructure Development</h5>
+                        <p>End-to-end infrastructure development including roads, railways, bridges, and industrial buildings with precision engineering and timely execution.</p>
+                        <div class="read-more">
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="roof-picture">
+                        <a href="#">
+                            <img src="images/environmental.jpg" alt="Environmental Services">
+                        </a>
+                    </div>
+                    <div class="service-info">
+                        <h5 class="service-title">Environmental Services</h5>
+                        <p>Responsible environmental management including land reclamation, waste management, and sustainable mining practices that prioritize ecological balance.</p>
+                        <div class="read-more">
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h4 class="p-head">Wholesale Prices</h4>
+                    <h4 class="p-head">Mining Expert</h4>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4 class="p-head">100% Genuine Materials</h4>
+                    <h4 class="p-head">Quality Assured</h4>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4 class="p-head">Assisted Buying</h4>
+                    <h4 class="p-head">Reliable Delivery</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Projects</h2>
+                <p>Explore our portfolio of successful mining and infrastructure projects delivered with excellence.</p>
+            </div>
+            <div class="services-wrap">
+                <div class="product-box">
+                    <div class="roof-picture">
+                        <a href="#">
+                            <img src="images/quarry.jpg" alt="Quarry Development">
+                        </a>
+                    </div>
+                    <div class="service-info">
+                        <h5 class="service-title">Quarry Development</h5>
+                        <p>Complete development of a 500-acre limestone quarry including permitting, infrastructure, and production systems setup.</p>
+                        <div class="read-more">
+                            <a href="#">View project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="roof-picture">
+                        <a href="#">
+                            <img src="images/highway.jpg" alt="Highway Construction">
+                        </a>
+                    </div>
+                    <div class="service-info">
+                        <h5 class="service-title">Highway Construction</h5>
+                        <p>Construction of a 120-mile highway with bridges, culverts, and associated infrastructure. Completed on time and within budget.</p>
+                        <div class="read-more">
+                            <a href="#">View project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="roof-picture">
+                        <a href="#">
+                            <img src="images/industrial.jpg" alt="Industrial Complex">
+                        </a>
+                    </div>
+                    <div class="service-info">
+                        <h5 class="service-title">Industrial Complex</h5>
+                        <p>Design and construction of a modern industrial complex spanning 75 acres with advanced facilities and infrastructure.</p>
+                        <div class="read-more">
+                            <a href="#">View project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="counter-section">
+        <div class="container">
+            <div class="counter-row" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
+                <div class="status-list">
+                    <div class="roof-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="status-info">
+                        <h2 class="counter">250+</h2>
+                        <h5 class="status-title">250+ Quality Projects</h5>
+                    </div>
+                </div>
+                <div class="status-list">
+                    <div class="roof-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="status-info">
+                        <h2 class="counter">50+</h2>
+                        <h5 class="status-title">50+ Screened Suppliers</h5>
+                    </div>
+                </div>
+                <div class="status-list">
+                    <div class="roof-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="status-info">
+                        <h2 class="counter">200+</h2>
+                        <h5 class="status-title">200+ Clients</h5>
+                    </div>
+                </div>
+                <div class="status-list">
+                    <div class="roof-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="status-info">
+                        <h2 class="counter">20+</h2>
+                        <h5 class="status-title">20+ Popular Brands</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section id="equipment" class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Equipment</h2>
+                <p>We utilize the latest machinery and equipment to ensure efficiency, safety, and quality in all our operations.</p>
+            </div>
+            <div class="services-wrap">
+                <div class="product-box">
+                    <div class="roof-picture">
+                        <a href="#">
+                            <img src="images/excavators.jpg" alt="Excavators">
+                        </a>
+                    </div>
+                    <div class="service-info">
+                        <h5 class="service-title">Excavators</h5>
+                        <p>Advanced excavators ranging from compact to heavy-duty models for efficient digging, lifting, and material handling.</p>
+                        <div class="read-more">
+                            <a href="#">View details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="roof-picture">
+                        <a href="#">
+                            <img src="images/dump-trucks.jpg" alt="Dump Trucks">
+                        </a>
+                    </div>
+                    <div class="service-info">
+                        <h5 class="service-title">Dump Trucks</h5>
+                        <p>High-capacity dump trucks for efficient material transportation with advanced safety features and durability.</p>
+                        <div class="read-more">
+                            <a href="#">View details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="roof-picture">
+                        <a href="#">
+                            <img src="images/drilling.jpg" alt="Drilling Equipment">
+                        </a>
+                    </div>
+                    <div class="service-info">
+                        <h5 class="service-title">Drilling Equipment</h5>
+                        <p>State-of-the-art drilling equipment for various mining operations with precision control and efficiency.</p>
+                        <div class="read-more">
+                            <a href="#">View details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="testimonial-wrap">
+            <div class="container">
+                <p>"I would like to thank you again for the hard work you and your team have put into the successful completion of our project. Your strong attention to keeping and improving the schedule is the major reason for the timeliness of completion."</p>
+                <h5 class="quote-client">Ganesh Sharma</h5>
+            </div>
+        </div>
+    </section>
